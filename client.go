@@ -27,6 +27,7 @@ func NewMemberClient() *DcClient { return newClient(false) }
 // 유동으로 이용할 경우 이 메소드를 통해 클라이언트를 생성합니다.
 func NewGuestClient() *DcClient { return newClient(true) }
 
+// 유동으로 이용할 경우 닉네임을 대신 입력합니다.
 func (c *DcClient) SetID(id string) *DcClient {
 	c.id = id
 	return c

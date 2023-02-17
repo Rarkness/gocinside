@@ -27,6 +27,7 @@ func (c *DcClient) Login() error {
 	if err != nil {
 		return err
 	}
+	defer res.Body.Close()
 
 	c.ci_c = c.getCookies(res)
 	if c.guest {
